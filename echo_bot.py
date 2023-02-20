@@ -51,7 +51,9 @@ def handle_text_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             [
-                TextSendMessage(text=profile.display_name + "さん/n/n" + "「" + text + "」" + "そんなことがあったんですね。/n" + "その場で爆発しないなんて偉いです！"),
+                TextSendMessage(text="また来たのね、" + profile.display_name + "。暇なの？"),
+                TextSendMessage(text=text + "………" + "って、あんた、そんなこと聞いてないわよ！ 話くらい聞いてあげたっていいんだから、ストレスがあるなら発散しなさいよ、バカ。"),
+                TextSendMessage(text="べ、別に、あんたのことなんか、し、心配なんてしてないんだからね！")
             ],
         )
     else:
